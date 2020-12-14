@@ -15,6 +15,7 @@ struct ContentView: View {
                 SplashView(show: $show)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(AnyTransition.move(edge: .leading)).animation(.default)
+                    .background(Color.blue)
                     .onAppear() {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                             self.show = true
@@ -24,6 +25,7 @@ struct ContentView: View {
                 MainView(show: $show)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                    .background(Color.green)
             }
         }
     }
